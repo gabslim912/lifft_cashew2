@@ -117,7 +117,7 @@ body {
   line-height: 1.7;
   color: #777777;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Vniyl', sans-serif;
   background-color: #fff;
   background-attachment: fixed;
 }
@@ -1012,8 +1012,8 @@ section > .container-fluid {
 }
 /* -------- Menuzord ---------- */
 .menuzord-menu > li > a {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
 }
 .menuzord .menuzord-menu > li.active > a i,
 .menuzord .menuzord-menu > li:hover > a i,
