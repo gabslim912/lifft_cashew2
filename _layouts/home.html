@@ -7,7 +7,7 @@ layout: default
       <div class="container-fluid p-0">
         <div class="bg-video">
           <div id="home-video" class="video">
-            <div class="player video-container" data-property="{videoURL:'v83P1X-kd7I',containment:'#home-video',autoPlay:true, showControls:true, mute:true, startAt:6, opacity:1}"></div>
+            <div class="player video-container" data-property="{videoURL:'v83P1X-kd7I',containment:'#home-video',autoPlay:true, showControls:true, mute:true, startAt:6, finishAt:10, opacity:1}"></div>
           </div>
         </div>
         
@@ -572,123 +572,64 @@ layout: default
       </div>
     </section>
 
-    <!-- Section: Choose us  -->
+    <!-- Section:  -->
     <section>
-      <div class="container pb-60">
+      <div class="container pb-40 pb-sm-60">
         <div class="section-content">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <h3 class="title mt-0 line-height-1 line-bottom font-24">Why People Choose Us</h3>
-              <div class="items">
-                <div class="icon-box p-0">
-                  <a class="icon mb-0 mr-0 pull-left" href="#">
-                    <i class="flaticon-charity-make-a-donation font-50 text-theme-colored"></i>
-                  </a>
-                  <div class="ml-80">
-                    <h4 class="icon-box-title mt-15 mb-20">Fundraising for Welfare</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non nulla placeat, odio, qui dicta alias <a class="font-13" href="page-fundraise.html">read more...</a></p>
+            <div class="col-md-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+              <h3 class="mt-0 line-bottom"><span class="font-weight-300">Upcoming </span> Events</h3>
+              {% for event in site.events %}
+              <div class="event media mb-20 no-bg no-border">
+                <div class="event-date media-left text-center flip bg-theme-colored p-20">
+                  <ul>
+                    <li class="font-30 text-white font-weight-600 border-bottom pb-10">28</li>
+                    <li class="font-22 text-white text-uppercase">Feb</li>
+                  </ul>
+                </div>
+                <div class="media-body pl-20">
+                  <div class="event-content pull-left flip">
+                    <h4 class="event-title media-heading font-raleway font-weight-700"><a href="#">{{ event.title }}</a></h4>
+                    <span class="mb-10 text-gray-darkgray mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                    <span class="text-gray-darkgray"><i class="fa fa-map-marker mr-5"></i> {{ event.location_address }}, {{ event.location_town }}, {{ event.location_region }}, {{ event.location_country }}</span>
+                    <p class="mt-5">{{ event.subtitle }}</p>
                   </div>
                 </div>
               </div>
-              <div class="items">
-                <div class="icon-box p-0">
-                  <a class="icon mb-0 mr-0 pull-left" href="#">
-                    <i class="flaticon-charity-home-insurance font-50 text-theme-colored"></i>
-                  </a>
-                  <div class="ml-80">
-                    <h4 class="icon-box-title mt-15 mb-20">Relief for Flood Affected People</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non nulla placeat, odio, qui dicta alias <a class="font-13" href="page-campaign.html">read more...</a></p>
+              {% endfor %}
+            </div>
+            <div class="col-md-7 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
+                {% for story in site.stories %}
+                <div class="item">
+                  <div class="row-fluid">
+                    <div class="col-md-12">
+                      <img src="{{ story.image }}" alt="{{ story.title }}" style="height: 450px;">
+                    </div>
+                    <div class="col-md-12">
+                      <h4 class="mb-0 text-black-666">Featured Stories:</h4>
+                      <h2 class="line-bottom mt-0">{{ story.title }}</h2>
+                      <p>{{ story.content | slice: 0, 300 }}...</p>
+                      <div class="mt-10 mb-20">
+                        <ul class="list-inline clearfix mt-10">
+                          <li class="pull-left flip pr-0">Date: <span class="font-weight-700 font-">{{story.date | date: "%b %d, %y"}} </span></li>
+                          <li class="text-theme-colored pull-right flip pr-0">Location: <span class="font-weight-700">{ story.location }}</span></li>
+                        </ul>
+                      </div>
+                      <a class="btn btn-theme-colored btn-sm" href="{{ story.url }}">Read {{ story.first_name }} {{ story.last_name }} story</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="items">
-                <div class="icon-box p-0">
-                  <a class="icon mb-0 mr-0 pull-left" href="#">
-                    <i class="flaticon-charity-shaking-hands-inside-a-heart font-50 text-theme-colored"></i>
-                  </a>
-                  <div class="ml-80">
-                    <h4 class="icon-box-title mt-15 mb-20">Adopt a Child</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non nulla placeat, odio, qui dicta alias <a class="font-13" href="page-our-impact.html">read more...</a></p>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 pb-sm-20">
-              <h3 class="title mt-0 line-height-1 line-bottom font-24"><span class="font-weight-300">Upcoming</span> Events</h3>
-              <div class="bxslider bx-nav-top" data-count="3">
-                <div class="event media mb-10 no-bg no-border">
-                  <div class="event-date media-left text-center flip bg-lighter p-20">
-                    <ul>
-                      <li class="font-30 text-theme-colored font-weight-600">28</li>
-                      <li class="font-22 text-uppercase">Feb</li>
-                    </ul>
-                  </div>
-                  <div class="media-body pl-20">
-                    <div class="event-content pull-left flip">
-                      <h4 class="event-title media-heading font-raleway font-weight-700"><a href="#">Gear up for giving</a></h4>
-                      <span class="mb-10 text-gray-darkgray mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                      <span class="text-gray-darkgray"><i class="fa fa-map-marker mr-5"></i> 25 Newyork City</span>
-                      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commod</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="event media mb-10 no-bg no-border">
-                  <div class="event-date media-left text-center flip bg-lighter p-20">
-                    <ul>
-                      <li class="font-30 text-theme-colored font-weight-600">28</li>
-                      <li class="font-22 text-uppercase">Feb</li>
-                    </ul>
-                  </div>
-                  <div class="media-body pl-20">
-                    <div class="event-content pull-left flip">
-                      <h4 class="event-title media-heading font-raleway font-weight-700"><a href="#">Gear up for giving</a></h4>
-                      <span class="mb-10 text-gray-darkgray mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                      <span class="text-gray-darkgray"><i class="fa fa-map-marker mr-5"></i> 25 Newyork City</span>
-                      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commod</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="event media mb-10 no-bg no-border">
-                  <div class="event-date media-left text-center flip bg-lighter p-20">
-                    <ul>
-                      <li class="font-30 text-theme-colored font-weight-600">28</li>
-                      <li class="font-22 text-uppercase">Feb</li>
-                    </ul>
-                  </div>
-                  <div class="media-body pl-20">
-                    <div class="event-content pull-left flip">
-                      <h4 class="event-title media-heading font-raleway font-weight-700"><a href="#">Gear up for giving</a></h4>
-                      <span class="mb-10 text-gray-darkgray mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                      <span class="text-gray-darkgray"><i class="fa fa-map-marker mr-5"></i> 25 Newyork City</span>
-                      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commod</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="event media mb-10 no-bg no-border">
-                  <div class="event-date media-left text-center flip bg-lighter p-20">
-                    <ul>
-                      <li class="font-30 text-theme-colored font-weight-600">28</li>
-                      <li class="font-22 text-uppercase">Feb</li>
-                    </ul>
-                  </div>
-                  <div class="media-body pl-20">
-                    <div class="event-content pull-left flip">
-                      <h4 class="event-title media-heading font-raleway font-weight-700"><a href="#">Gear up for giving</a></h4>
-                      <span class="mb-10 text-gray-darkgray mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                      <span class="text-gray-darkgray"><i class="fa fa-map-marker mr-5"></i> 25 Newyork City</span>
-                      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commod</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  
           </div>
         </div>
       </div>
     </section>
 
     <!-- Divider: Make a Donation -->
-    <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
+    <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="/assets/img/cashew_1.jpg" data-parallax-ratio="0.1">
       <div class="container pt-0 pb-0">
         <div class="row">
           <div class="col-md-8">
@@ -1124,7 +1065,7 @@ layout: default
     </section>
 
     <!-- Divider: Funfact -->
-    <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
+    <section class="divider parallax layer-overlay overlay-dark-6" data-bg-img="/assets/img/cashew_1.jpg" data-parallax-ratio="0.2">
       <div class="container pt-90 pb-90">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
