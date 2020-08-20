@@ -1,11 +1,11 @@
 <!-- Header -->
 <header id="header" class="header">
-    <div class="header-top bg-theme-colored sm-text-center">
-      <div class="container">
+    <div class="header-top bg-colored sm-text-center">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="widget no-border m-0">
-              <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm flip sm-pull-none sm-text-center mt-sm-15">
+              <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm flip sm-pull-none sm-text-center mt-sm-0">
                 <li><a href="#"><i class="fa fa-facebook text-white"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter text-white"></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus text-white"></i></a></li>
@@ -14,29 +14,31 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-7" style="margin-top: 8px;">
             <div class="widget no-border m-0">
-              <ul class="list-inline pull-right sm-pull-none sm-text-center mt-5">
+              <ul class="list-inline pull-right sm-pull-none sm-text-center mt-0">
                 <li>
-                  <a href="#" class="text-white">FAQ</a>
+                  <a href="#" class="text-colored">FAQ</a>
                 </li>
-                <li class="text-white">|</li>
+                <li class="text-colored">|</li>
                 <li>
-                  <a href="#" class="text-white">Support</a>
+                  <a href="https://www.shelter.org/donate" target="blank" class="text-colored">Donate</a>
                 </li>
-                <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-white"></i> <a href="#" class="text-white">{{ site.email }}</a>
+                <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-colored"></i> <a href="#" class="text-colored">{{ site.email }}</a>
                 </li>
               </ul>
-            </div><div class="clearfix"></div>
+            </div>
           </div>
+          
+          
         </div>
       </div>
     </div>
     <div class="header-nav">
       <div class="header-nav-wrapper navbar-scrolltofixed bg-light">
-        <div class="container">
-          <nav id="menuzord" class="menuzord default bg-light">
-            <a class="menuzord-brand pull-left flip xs-pull-center mb-15" href="/"><img src="{{ site.logo_white }}" alt=""></a>
+        <div class="container-fluid">
+          <nav id="menuzord-right" class="menuzord default no-bg" style="margin-top: 10px;">
+            <a class="menuzord-brand pull-left flip xs-pull-center mb-15" href="/"><img src="{{ site.logo_white }}" alt="" style="max-height: 75px; margin-top: -10px; margin-bottom: -10px;"></a>
             <ul class="menuzord-menu" style="margin-left: 60px;">
               <li class="active"><a href="/">Home</a>
                 
@@ -108,7 +110,7 @@
                 </ul>
               </li>
             </ul>
-            <a class="btn btn-sm btn-theme-colored pull-right flip hidden-sm hidden-xs mt-20 ajaxload-popup" href="ajax-load/donation-form.html" >Donate Now</a>
+            <!--<a class="btn btn-sm btn-theme-colored pull-right flip hidden-sm hidden-xs mt-20 ajaxload-popup" href="ajax-load/donation-form.html" >Donate Now</a>-->
           </nav>
         </div>
       </div>
