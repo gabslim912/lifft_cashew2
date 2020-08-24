@@ -18,7 +18,7 @@
             <div class="widget no-border m-0">
               <ul class="list-inline pull-right sm-pull-none sm-text-center mt-0">
                 <li>
-                  <a href="#" class="text-colored">FAQ</a>
+                  <a href="/faq.html" class="text-colored">FAQ</a>
                 </li>
                 <li class="text-colored">|</li>
                 <li>
@@ -46,15 +46,15 @@
               <li><a href="/about.html">About</a>
                 
               </li>
-              <li><a href="#">Donors & Partners</a>
+              <li><a href="/donors.html">Donors & Partners</a>
                 
               </li>
-              <li><a href="#">Our Work</a>
-                <ul class="dropdown">
+              <li><a href="/our_work.html">Our Work</a>
+                <!--<ul class="dropdown">
                   <li><a href="#">Our Approach</a></li>
                   <li><a href="#">Our Intervention Area</a></li>
                   <li><a href="#">Our Impact</a></li>
-                </ul>
+                </ul>-->
               </li>
               <li><a href="javascript:void(0)">News and Events</a>
                 <div class="megamenu">
@@ -64,10 +64,10 @@
                         <li>
                           <h5 class="pl-10"><strong>Quick Links:</strong></h5>
                         </li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Press releases</a></li>
-                        <li><a href="#">Publications</a></li>
+                        <li><a href="/blog.html">Latest News</a></li>
+                        <li><a href="/events.html">Events</a></li>
+                        <li><a href="/press.html">Press releases</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
                         
                       </ul>
                     </div>
@@ -76,7 +76,7 @@
                       <article class="post clearfix">
                         <div>
                           {% assign last_event = site.events | last %}
-                          <div class="post-thumb"> <img class="img-responsive" src="{{ last_event.image }}" alt=""> </div>
+                          <div class="post-thumb"> <img class="img-responsive" src="{{ last_event.image }}" alt="" style="width: 80%; height: auto; margin-bottom: 12px;"> </div>
                           <h4 class="entry-title"><a href="{{ last_event.url }}">{{ last_event.title }}</a></h4>
                         </div>
                         <div>
@@ -102,11 +102,8 @@
               </li>
               <li><a href="#">Contact Us</a>
                 <ul class="dropdown">
-                  <li><a href="#">Contact form</a></li>
-                  <li><a href="#">Our offices</a></li>
-                  <li><a href="#">Jobs and tenders</a></li>
-                  <li><a href="#">Internships</a></li>
-                  <li><a href="#">Volunteer</a></li>
+                  <li><a href="/contact.html">Contact us</a></li>
+                  <li><a href="/join_us.html">Join our team</a></li>
                 </ul>
               </li>
             </ul>
