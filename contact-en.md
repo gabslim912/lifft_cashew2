@@ -2,7 +2,7 @@
 layout: contact
 title: Contact
 subtitle: Let's get in touch
-permalink: "/en/contact.html"
+permalink: "/contact.html"
 parallax_image: "/assets/img/cashew_511.png"
 description: Get in touch with our beautiful team
 date: 2019-04-24T07:40:15.000+00:00
